@@ -96,6 +96,7 @@ class ValidatorViewController: UIViewController, UITextFieldDelegate {
     func enableSubmitButton() {
         if self.passwordConfirmTextField.text! == self.passwordTextField.text! && (self.phoneTextField.text?.characters.count)! >= 7 && emailConfirmationTextField.text! == emailTextField.text! && (self.passwordConfirmTextField.text?.characters.count)! > 1{
             self.submitButton.isEnabled = true
+            
         }
     }
     
