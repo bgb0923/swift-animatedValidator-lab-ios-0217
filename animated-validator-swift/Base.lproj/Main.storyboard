@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ecQ-MV-S0N">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ecQ-MV-S0N">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Validator View Controller-->
@@ -14,47 +18,68 @@
                         <viewControllerLayoutGuide type="bottom" id="lLl-mp-b9a"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zbB-f3-2Tu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YfI-CE-YJy">
                                 <rect key="frame" x="200" y="35" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="doneEditingEmail:" destination="ecQ-MV-S0N" eventType="editingDidEnd" id="2fJ-Hq-fHr"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aC6-8m-vL4">
                                 <rect key="frame" x="200" y="73" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="doneEditingEmailConfirm:" destination="ecQ-MV-S0N" eventType="editingDidEnd" id="lL0-oh-PQO"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tEJ-pc-xDi">
                                 <rect key="frame" x="200" y="111" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="doneEditingPhone:" destination="ecQ-MV-S0N" eventType="editingDidEnd" id="dKE-Cm-uTd"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KcG-7x-K13">
                                 <rect key="frame" x="200" y="149" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="doneEditingPassword:" destination="ecQ-MV-S0N" eventType="editingDidEnd" id="WTt-X7-OnB"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7B-3x-PEh">
                                 <rect key="frame" x="200" y="187" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="doneEditingConfirmPassword:" destination="ecQ-MV-S0N" eventType="editingDidEnd" id="9Yz-KS-e7L"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIu-8E-4Lm">
                                 <rect key="frame" x="277" y="535" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="submit"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="emailConfirmationTextField" destination="aC6-8m-vL4" id="OmL-s6-qeF"/>
-                        <outlet property="emailTextField" destination="YfI-CE-YJy" id="Ook-rq-6oI"/>
-                        <outlet property="passwordConfirmTextField" destination="V7B-3x-PEh" id="BI3-43-lie"/>
-                        <outlet property="passwordTextField" destination="KcG-7x-K13" id="npk-nE-wM1"/>
-                        <outlet property="phoneTextField" destination="tEJ-pc-xDi" id="sHX-8P-NzR"/>
+                        <outlet property="emailConfirmationTextField" destination="aC6-8m-vL4" id="ugR-7T-FPt"/>
+                        <outlet property="emailTextField" destination="YfI-CE-YJy" id="nxj-5p-aAa"/>
+                        <outlet property="passwordConfirmTextField" destination="V7B-3x-PEh" id="gIX-E0-0xh"/>
+                        <outlet property="passwordTextField" destination="KcG-7x-K13" id="irR-fH-f05"/>
+                        <outlet property="phoneTextField" destination="tEJ-pc-xDi" id="hCp-2s-Q5q"/>
                         <outlet property="submitButton" destination="JIu-8E-4Lm" id="XFa-Fq-CX4"/>
                     </connections>
                 </viewController>
